@@ -1,0 +1,2 @@
+az container create --resource-group cisc5550finalproject --name finalprojectapp --image ferdmartin/finalprojectapp --dns-name-label fernandosapp --ports 5003
+az container show --resource-group cisc5550finalproject --name finalprojectapp --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table

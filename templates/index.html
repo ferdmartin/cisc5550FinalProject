@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDo App FernandoMartinez</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 align="center" class="p-3 mb-2 bg-dark text-white">To Do App Final Project</h3>
+    <br></br>
+    <div class="container">
+        <table class='table'>
+            <th>Tasks</th>
+            <th>Due Dates</th>
+            <th></th>
+            {% for entry in todolist %}
+            <tr>
+                <td {% if entry.status=='done' %} class='done' {% endif %}>{{ entry.what_to_do|safe }}</td>
+                <td>{{ entry.due_date|safe }}</td>
+                <td>
+                    <button class="btn btn-success" onclick="location.href='/mark/{{entry.what_to_do|urlencode}}'">Mark As Done </button>
+                    <button class="btn btn-danger" onclick="location.href='/delete/{{entry.what_to_do|urlencode}}'">Delete</button>
+                    
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td>
+                    <em>Nothing to do for now. Let's create some tasks!</em>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button onclick="toggle_entry_form();" class="btn btn-primary" id='toggle_button'>Add a new task</button>
+
+        <div class="container">
+            <form action="/add" method="POST" id="add-form" style="display:none">
+                <br></br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        What to do?
+                        <input type="text" name="what_to_do" value="" placeholder="Introduce new task" />
+                    </div>
+                    <div class="col-sm-6">
+                        When?
+                        <input type="date" name="due_date" value="" />
+                    </div>
+                    <br></br>
+                    <div class="col-sm-4">
+                        <input type="submit" class="btn btn-success" value="Save the new task" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div>
+        <br></br>
+        <h5>Do you want to see the tasks in your language?</h5>
+        {%if translated %}
+        <button onclick="location.href='/translate'" class="btn btn-danger">Translate back to original language</button>
+        {% else %}
+        <button onclick="toggle_translate_form();" class="btn btn-primary" id='translate_button'>Translate existing tasks</button>
+        {% endif %}
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="/translate" method="POST" id="translate-form" style="display:none">
+            <br></br>
+            <div class="form-group">
+                <div class="col-sm-6">
+                    Select Language: 
+                    <select class="form-control" name="code">
+                        <option>Select Language</option>
+                        {% for language in languages%}
+                        <option value={{language["code"]}}>{{language["name"]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <br></br>
+                <div class="col-sm-3">
+                    <input type="submit" class="btn btn-dark" value="translate now" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var show_entry_form = false;
+
+        function toggle_entry_form() {
+            if (show_entry_form) {
+                $('#add-form').hide();
+                $('#toggle_button').text("Add a new task");
+            } else {
+                $('#add-form').show();
+                $('#toggle_button').text("Cancel the new entry");
+            }
+            show_entry_form = !show_entry_form;
+        };
+
+        var show_translate_form = false;
+
+        function toggle_translate_form() {
+            if (show_translate_form) {
+                $('#translate-form').hide();
+                $('#translate_button').text("Translate tasks");
+            } else {
+                $('#translate-form').show();
+                $('#translate_button').text("Cancel translation");
+            }
+            show_translate_form = !show_translate_form;
+        };
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+</body>
+
+</html>

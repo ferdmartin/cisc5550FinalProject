@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fmartinezlopez-cisc5550",
+  "private_key_id": "f3ca64530f42367c0d6a2fe18a6bf317e2d035a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+p+Drb3C2cWAb\n9Fz2HtBcU/aGS20UxfF+6wHe+9iaXgaIcc90eGNBDYkr0ocGyCJ3U3D0DK0YKhK8\nQ9KKRCg2ons1V9wpNtRBL2o/PRbjwzBMw0qL2OUdhMJpkA43ZjWSjOPrnY7w/KuK\nGdA5HqYhG0lCd9k7KGZJhFKlspCgo3QrT5CpZq5BmzZc2NX9K9+ZXtdKUBx5hpOv\n/ef8/RbmwspJSJKTPQKNobstNvU1eL8d97FMg3+1iCHGYh+ZZJvKPD+w5JdOhrSy\nYdghSdpDzB8vZq7mypTuNiugkyXhexkn36xOR9PbqoRBa5E70gfBSNwOdaGdInAv\n7uAtXIfxAgMBAAECggEAAubu5mo7psqseDB2nj+w0425odAR4DAwOzb+opDI5sVA\nAuZgSXRNq7MExxW4LhCrlfHJUsqbroTT5JCUzTHC8AS7NooABlfPC4haMfBPJuzt\nfY5A1jL2zTvNhj3oYX2TOFbREJId0seivoJKKDn278pNp0oDMkxKUpvFrdMplM3n\nh5dDQ9YqPWIqYokiAYv1GA+ixvQbgZizg3yB0rAdsZEykmlDpkQhgrnVj1IONrAg\nBKGgfFpWnpC0OWIf/z1ZOJcB4uBDzhgP94gd6kXpdsg9A+KzjjYLTeeLXbJFNuMu\nqbiPEuhFgQalEC3QxTf3RGan38wAY9sBiwjyjNcHWwKBgQD10CNl3kMZ/BeHER/s\n77Hwe0N/IQkroVwxt2+SqFcDl1ET1/qR10c7OGSRBk2hUB3t76kdOhmSpiFUpJ4D\n4G8LqlL4lkdWIJIGo57KrqenluwboYJUSLCdQx271Y+DqA1AKLPT320nGSDjjQqm\nFpo/RqL1wUNH/2DMnIFtZqcjTwKBgQDGjpHlPkWFwo2Qngi9GDltOQXR3amaO0bj\niVq99mpDeoZ+MdzJl5sSHaGbrWQh2fTswtqQrotQTwemDbqiVexQoGaBZZuW5dbv\nhXy7aAm7vZARqAqdmT1RbhkHUNZLMuvvSdm60lW32LyX+bAPVIYTfwVAuToUZ46R\nUMwPjDfQvwKBgF9VNrVGSw3j2BgZCyGwIHmcxKOkY1MZhJD/jHT7dqu83sPsapBv\nRn/wMgiQwkDCuqjR3uun4c0fQyP5qBLm0wpaJ02jsszzWs7aXDZNIFZ90NoyfEJF\n4sFLC1gSzlMINQNiBcQxDbsxIrE9vRiHAZFyyra3Gmns4FTaidOtETs/AoGBAI0a\nEgoUN7m3qXylIdanWWAKDt22JWnqSBU4rhii/Z8Yem1BqAJGz7ePASKtlKQNzOVY\nD5STxYL7tpbF2OS2JOqjIlVATNJuYVDzztErPQeCzdgOUATxOkcc84JkavUjqdDx\n7V27TZkJ1/Q0R26NhX5jXOtC9kg702/nOCywW5XnAoGAXo3WmzKyQtQ1anvujJ7y\nQ3xf6i1g2jm3uuNGU7zsumkvGb3B8VcOGwBt1ImqyyiSG42pXDLogw6eXEU6we0V\nxBn/vC9VTtFikokaKph6yCD5b63N0S8OKT3+gfFXGL+P3fik4Us/A9aAGMWOcpT2\n7DUd+TPhOheyC76GchDTGSI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tasks-translator@fmartinezlopez-cisc5550.iam.gserviceaccount.com",
+  "client_id": "117391631299419399398",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tasks-translator%40fmartinezlopez-cisc5550.iam.gserviceaccount.com"
+}
